@@ -1,0 +1,381 @@
+/* === CSS Variables for easy theming === */
+:root {
+  --primary: #b68daa;
+  --secondary: #b5fffc;
+  --accent: #4e4376;
+  --bg-light: #faf8f9;
+  --bg-dark: #ffadbe;
+  --text-dark: #222;
+  --text-light: #fff;
+  --radius: 1.2rem;
+  --shadow: 0 2px 16px 0 #0001;
+  --shadow-hover: 0 6px 24px 0 #0002;
+}
+
+.glass-bg {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px 0 #0002;
+  border-radius: var(--radius, 1.2rem);
+}
+/* Loader Styles */
+.loader-bg {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, #fff7fa 60%, #ffe6f0 100%);
+  z-index: 9999;
+  transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.loader-bg.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* Oven Animation */
+.oven {
+  position: relative;
+  width: 90px;
+  height: 80px;
+  background: #f8d7e5;
+  border-radius: 18px 18px 12px 12px;
+  box-shadow: 0 4px 24px #b68daa33;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  overflow: visible;
+}
+.oven .tray {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  width: 60px;
+  height: 10px;
+  background: #b68daa;
+  border-radius: 5px;
+}
+.oven .bread {
+  position: absolute;
+  bottom: 18px;
+  left: 32px;
+  width: 26px;
+  height: 18px;
+  background: #ffe6b0;
+  border-radius: 10px 10px 14px 14px;
+  box-shadow: 0 2px 8px #b68daa22;
+  animation: bread-rise 1.5s infinite alternate cubic-bezier(.4,0,.2,1);
+}
+@keyframes bread-rise {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-8px);}
+}
+.oven .steam {
+  position: absolute;
+  left: 50%;
+  width: 6px;
+  height: 24px;
+  background: linear-gradient(to top, #fff6, #fff0);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: steam-up 1.2s infinite;
+}
+.oven .steam1 { top: -18px; margin-left: -18px; animation-delay: 0s;}
+.oven .steam2 { top: -22px; margin-left: -3px; animation-delay: 0.4s;}
+.oven .steam3 { top: -16px; margin-left: 12px; animation-delay: 0.8s;}
+@keyframes steam-up {
+  0% { opacity: 0.7; transform: translateY(0) scaleX(1);}
+  50% { opacity: 1; transform: translateY(-10px) scaleX(1.2);}
+  100% { opacity: 0; transform: translateY(-20px) scaleX(0.8);}
+}
+/* Hero Carousel Height Fix */
+.hero-section,
+.hero-section .carousel,
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+  min-height: 60vh;
+  height: 60vh;
+}
+@media (max-width: 767px) {
+  .hero-section,
+  .hero-section .carousel,
+  .hero-section .carousel-inner,
+  .hero-section .carousel-item {
+    min-height: 40vh;
+    height: 40vh;
+  }
+}
+
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* === Base Styles === */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif, 500italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: black;
+}
+
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
+
+/* === Navbar === */
+.navbar {
+  /* Add to styles.css */
+
+  background: rgba(34,34,34,0.85) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 16px 0 #0002;
+}
+
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: 2px solid var(--primary);
+  background: #fff;
+}
+
+/* === Hero Section === */
+.hero-section, .bg-hero {
+  background: linear-gradient(120deg, #f8fafc 70%, #e0e7ef 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero-section .display-3,
+.bg-hero .display-3 {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary) 20%, var(--secondary) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero-section img,
+.bg-hero img {
+  border-radius: 50%;
+  box-shadow: 0 4px 24px 0 #0002;
+  border: 4px solid #fff;
+}
+
+/* === Section Spacing === */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (max-width: 767px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* === Card Styles === */
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-hover);
+}
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.card-img-top, .card-img {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  object-fit: cover;
+  max-height: 220px;
+}
+
+/* === Button Styles === */
+.btn-primary, .btn-outline-primary {
+  border-radius: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border: none;
+  color: var(--text-dark);
+  box-shadow: 0 2px 8px 0 #0001;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+  color: var(--text-dark);
+  box-shadow: 0 4px 16px 0 #0002;
+}
+.btn-outline-primary {
+  border: 2px solid var(--secondary);
+  color: var(--text-dark);
+  background: #fff;
+}
+.btn-outline-primary:hover {
+  background: var(--secondary);
+  color: var(--text-dark);
+}
+
+/* === Section Headings === */
+section h2 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary) 20%, var(--secondary) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* === List Styles === */
+ul.list-unstyled li i {
+  color: var(--primary);
+}
+
+/* === Footer === */
+footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Testimonial Avatars === */
+.rounded-circle {
+  border: 2px solid var(--secondary);
+}
+
+/* === Responsive Typography === */
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .display-3, .display-4, .display-5, .display-6 {
+    font-size: 2rem !important;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* === AOS Animations (optional, if using AOS) === */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* === Swiper Styles (optional, if using Swiper.js) === */
+.swiper {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.swiper-slide {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.floating-social {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.floating-social .btn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px #0002;
+  padding: 0;
+}
+.floating-social .btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px #0003;
+}
+
+/* Animated Gradient Background */
+.animated-gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: linear-gradient(120deg, #ffe6f0, #f8d7e5, #e0c3fc, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  25% {background-position: 50% 100%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 0%;}
+  100% {background-position: 0% 50%;}
+}

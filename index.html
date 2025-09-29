@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drips & Cream - Premium Eggless Bakery Kanpur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS (optional) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+ <link rel="icon" type="image/png" href="img/fevicon.png">
+
+</head>
+<body>
+<div class="animated-gradient-bg, "></div>
+  <!-- Loader -->
+  <div id="loader" class="loader-bg d-flex flex-column justify-content-center align-items-center">
+    <div class="oven">
+      <div class="tray"></div>
+      <div class="bread"></div>
+      <div class="steam steam1"></div>
+      <div class="steam steam2"></div>
+      <div class="steam steam3"></div>
+    </div>
+    <div class="mt-4 text-center">
+      <span class="fs-4 fw-bold">Something is baking...</span>
+    </div>
+  </div>
+
+  <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hide');
+    }, 900); // Loader stays for at least 0.9s for effect
+  });
+</script>
+  <!-- ...rest of your content... -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="img/fevicon.png" alt="Drips & Cream Logo" width="48" class="ms-auto">
+        Drips & Cream
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+<section style="min-height: 60vh;">
+  <div class="container h-100 d-flex align-items-center justify-content-center" style="min-height: 60vh;">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg w-100">
+      <div id="basicCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100 position-relative">
+            <div style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(120deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.2) 100%);
+              z-index: 2;
+              pointer-events: none;
+            "></div>
+            <img src="img/hero01.jpg" class="d-block w-100 h-100" style="object-fit: cover; min-height: 60vh;" alt="...">
+          </div>
+          <div class="carousel-item h-100 position-relative">
+            <div style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(120deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.2) 100%);
+              z-index: 2;
+              pointer-events: none;
+            "></div>
+            <img src="img/hero02.jpg" class="d-block w-100 h-100" style="object-fit: cover; min-height: 60vh;" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#basicCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#basicCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+ <!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6" data-aos="fade-up">
+          <img src="img/aboutus.png" alt="About Drips & Cream" class="img-fluid rounded-4 shadow-sm">
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="fw-bold mb-3">About Us</h2>
+          <p class="mb-4">Drips & Cream is a cloud bakery based in Lal Bangla, Kanpur, specializing in premium eggless homemade cakes, cookies, and desserts. We believe in quality, freshness, and a personal touch for every order.</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Eggless & Homemade</li>
+            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> 1-Day Advance Booking</li>
+            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Local Delivery in Kanpur</li>
+            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Custom Orders for Events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Products Section (Swiper Slider Example) -->
+<section id="products" class="py-5">
+  <div class="container">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Products</h2>
+        <p class="text-muted">Explore our bestsellers and signature eggless treats</p>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper mb-4" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="img/cake1.png" class="card-img-top" alt="Cake">
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Truffle Cake</h5>
+                <p class="card-text">Rich, moist, and 100% eggless. Perfect for celebrations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="img/cake2.jpg" class="card-img-top" alt="Cookies">
+              <div class="card-body">
+                <h5 class="card-title">Red Velvet Cake</h5>
+                <p class="card-text">Rich, moist, and 100% eggless. Perfect for celebrations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="img/cake3.png" class="card-img-top" alt="Cupcakes">
+              <div class="card-body">
+                <h5 class="card-title">Black Forest Cake</h5>
+                <p class="card-text">Rich, moist, and 100% eggless. Perfect for celebrations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://www.instagram.com/drips.and.cream" target="_blank" class="btn btn-outline-primary rounded-pill px-4">See More on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-light">
+  <div class="container">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Customer Testimonials</h2>
+        <p class="text-muted">What our happy customers say</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"Absolutely delicious cakes! The best eggless bakery in Kanpur. Highly recommended."</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="img/testimonial-1.jpg" alt="Customer" class="rounded-circle me-3" width="48">
+                <div>
+                  <h6 class="mb-0">Aman Gupta</h6>
+                  <small class="text-muted">Kanpur</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"Loved the cupcakes and cookies. Perfect for gifting and parties!"</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="img/testimonial-2.jpg" alt="Customer" class="rounded-circle me-3" width="48">
+                <div>
+                  <h6 class="mb-0">Priya Singh</h6>
+                  <small class="text-muted">Kanpur</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"Prompt delivery and amazing taste. Will order again!"</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="img/testimonial-3.jpg" alt="Customer" class="rounded-circle me-3" width="48">
+                <div>
+                  <h6 class="mb-0">Rohit Verma</h6>
+                  <small class="text-muted">Kanpur</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg">
+      <div class="row g-5">
+        <div class="col-md-6" data-aos="fade-right">
+          <h2 class="fw-bold mb-3">Contact Us</h2>
+          <p class="mb-4">Ready to order or have a question? Reach out to us!</p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i> Lal Bangla, Kanpur, Uttar Pradesh</li>
+            <li class="mb-2"><i class="fa fa-phone-alt text-primary me-2"></i> +91 98765 43210</li>
+            <li class="mb-2"><i class="fa fa-envelope text-primary me-2"></i> dripsandcream@gmail.com</li>
+            <li class="mb-2"><i class="fab fa-instagram text-primary me-2"></i> <a href="https://www.instagram.com/drips.and.cream" target="_blank" class="text-decoration-none text-dark">@drips.and.cream</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary rounded-pill px-4">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; 2025 Drips & Cream. All Rights Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Designed by <a href="https://naveenk1013.github.io/Portfolio/" class="text-primary text-decoration-none">Naveen Kumar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+  <!-- Swiper JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Swiper initialization for products
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+      }
+    });
+  </script>
+
+  <!-- Floating Social Buttons -->
+<div class="floating-social">
+  <a href="https://wa.me/7905857356" target="_blank" class="btn btn-success shadow rounded-circle mb-2" title="WhatsApp">
+    <i class="fab fa-whatsapp fa-lg"></i>
+  </a>
+  <a href="https://www.instagram.com/drips.and.cream?igsh=MXVqMTIxeGJyaTFubA==" target="_blank" class="btn btn-danger shadow rounded-circle" title="Instagram" style="background: linear-gradient(45deg,#fd5949,#d6249f,#285AEB); border: none;">
+    <i class="fab fa-instagram fa-lg"></i>
+  </a>
+</div>
+
+</body>
+</html>
