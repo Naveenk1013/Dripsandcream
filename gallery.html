@@ -187,8 +187,31 @@
       }
     });
   </script>
-
+<script>
+  // Open lightbox on image click
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.onclick = function() {
+      document.getElementById('lightbox-img').src = this.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+  });
+  // Close lightbox function
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+  }
+  // Close on background click
+  document.getElementById('lightbox').onclick = function(e) {
+    if(e.target === this) closeLightbox();
+  }
+  // Optional: Close on ESC key
+  document.addEventListener('keydown', function(e) {
+    if(e.key === "Escape") closeLightbox();
+  });
+</script>
 </body>
 
 </html>
+
 
