@@ -5,7 +5,7 @@
   --accent: #4e4376;
   --bg-light: #faf8f9;
   --bg-dark: #ffadbe;
-  --text-dark: #222;
+  --text-dark: #0f0f0f;
   --text-light: #fff;
   --radius: 1.2rem;
   --shadow: 0 2px 16px 0 #0001;
@@ -33,7 +33,15 @@
   pointer-events: none;
   transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
 }
+/* Animate icons (Font Awesome 6+) */
+.fa-bounce { animation: fa-bounce 1.2s infinite alternate; }
+.fa-beat { animation: fa-beat 1.2s infinite alternate; }
+.fa-shake { animation: fa-shake 1.2s infinite alternate; }
+.fa-spin { animation: fa-spin 2s linear infinite; }
 
+@keyframes fa-bounce { 0%{transform:translateY(0);} 100%{transform:translateY(-8px);} }
+@keyframes fa-beat { 0%{transform:scale(1);} 100%{transform:scale(1.2);} }
+@keyframes fa-shake { 0%,100%{transform:translateX(0);} 50%{transform:translateX(6px);} }
 /* Oven Animation */
 .oven {
   position: relative;
