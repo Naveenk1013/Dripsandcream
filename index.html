@@ -68,9 +68,6 @@
   </nav>
 
  
-<section style="min-height: 60vh;">
-  <div class="container h-100 d-flex align-items-center justify-content-center" style="min-height: 60vh;">
-    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg w-100">
       <div id="basicCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3500">
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100 position-relative">
@@ -80,7 +77,8 @@
               background: linear-gradient(120deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.2) 100%);
               z-index: 2;
               pointer-events: none;
-            "></div>
+            ">
+            </div>
             <img src="img/hero01.jpg" class="d-block w-100 h-100" style="object-fit: cover; min-height: 60vh;" alt="...">
           </div>
           <div class="carousel-item h-100 position-relative">
@@ -90,7 +88,21 @@
               background: linear-gradient(120deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.2) 100%);
               z-index: 2;
               pointer-events: none;
-            "></div>
+            ">
+            </div>
+
+<img src="img/hero03.png" class="d-block w-100 h-100" style="object-fit: cover; min-height: 60vh;" alt="...">
+          </div>
+          <div class="carousel-item h-100 position-relative">
+            <div style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(120deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.2) 100%);
+              z-index: 2;
+              pointer-events: none;
+            ">
+            </div>
+
             <img src="img/hero02.jpg" class="d-block w-100 h-100" style="object-fit: cover; min-height: 60vh;" alt="...">
           </div>
         </div>
@@ -101,29 +113,60 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-    </div>
-  </div>
+  
 </section>
 
 
-  <!-- About Section -->
- <!-- About Section -->
+<!-- About Section -->
 <section id="about" class="py-5 bg-light">
   <div class="container">
-    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg">
-      <div class="row align-items-center g-5">
+    <div class="glass-bg p-4 p-md-5 rounded-4 shadow-lg position-relative overflow-hidden" style="border: 2px solid rgba(255,255,255,0.25); background: linear-gradient(120deg,rgba(255,255,255,0.35),rgba(255,255,255,0.15));">
+      <!-- Decorative gradient circle -->
+      <div style="position:absolute;top:-60px;right:-60px;width:160px;height:160px;background:radial-gradient(circle,#f8d7e5 60%,#fff0 100%);z-index:0;opacity:0.5;"></div>
+      <div class="row align-items-center g-5 position-relative" style="z-index:1;">
         <div class="col-md-6" data-aos="fade-up">
-          <img src="img/aboutus.png" alt="About Drips & Cream" class="img-fluid rounded-4 shadow-sm">
+          <img src="img/aboutus.png" alt="About Drips & Cream" class="img-fluid rounded-4 shadow-sm mb-3">
+          <blockquote class="fst-italic text-secondary small mt-4" data-aos="fade-right" data-aos-delay="200">
+            “Baking is our love language. Every cake is a story, every cookie a memory.”
+          </blockquote>
+          <div class="mt-2 text-end">
+            <span class="fw-bold text-primary">— Chef Tarandeep singh, Founder</span>
+          </div>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
           <h2 class="fw-bold mb-3">About Us</h2>
           <p class="mb-4">Drips & Cream is a cloud bakery based in Lal Bangla, Kanpur, specializing in premium eggless homemade cakes, cookies, and desserts. We believe in quality, freshness, and a personal touch for every order.</p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Eggless & Homemade</li>
-            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> 1-Day Advance Booking</li>
-            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Local Delivery in Kanpur</li>
-            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Custom Orders for Events</li>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-3 d-flex align-items-center">
+              <span class="me-3 fs-3 text-success"><i class="fa fa-leaf fa-bounce"></i></span>
+              <span>Eggless & Homemade</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="me-3 fs-3 text-warning"><i class="fa fa-calendar-check fa-beat"></i></span>
+              <span>1-Day Advance Booking</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="me-3 fs-3 text-info"><i class="fa fa-truck fa-shake"></i></span>
+              <span>Local Delivery in Kanpur</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="me-3 fs-3 text-danger"><i class="fa fa-birthday-cake fa-spin"></i></span>
+              <span>Custom Orders for Events</span>
+            </li>
           </ul>
+          <div class="d-flex gap-4 mb-4">
+            <div class="text-center">
+              <div class="fs-2 fw-bold text-primary" data-aos="fade-up" data-aos-delay="200">500+</div>
+              <div class="small text-muted">Cakes Baked</div>
+            </div>
+            <div class="text-center">
+              <div class="fs-2 fw-bold text-success" data-aos="fade-up" data-aos-delay="300">300+</div>
+              <div class="small text-muted">Happy Customers</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary rounded-pill px-4" data-aos="zoom-in" data-aos-delay="400">
+            Meet the Baker
+          </a>
         </div>
       </div>
     </div>
