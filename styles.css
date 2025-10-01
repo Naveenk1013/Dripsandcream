@@ -434,3 +434,52 @@ footer a:hover {
     height: 140px;
   }
 }
+
+.gallery-tiled-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Optional: for masonry-like effect on modern browsers */
+  grid-auto-rows: 180px;
+}
+
+.gallery-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius, 1.2rem);
+  box-shadow: 0 4px 24px 0 #0002;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+  background: rgba(255,255,255,0.18);
+  position: relative;
+}
+
+.gallery-tile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s, transform 0.3s;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.gallery-tile:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 #0003;
+}
+
+.gallery-tile-img:hover {
+  filter: brightness(1.08) saturate(1.2);
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .gallery-tiled-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-auto-rows: 100px;
+  }
+}
